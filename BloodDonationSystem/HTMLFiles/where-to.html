@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en tr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Where to Donate</title>
+	<link rel="stylesheet" type="text/css" href="../css/whereto.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/5aa63ed45f.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+</head>
+<body>	
+	<header class="header">
+		<div class="flex">
+			<div class="logo">
+				<h1 class="logo-h"><a href="../HTMLFiles/Home1.html">IKU <span class="logo-h2">Blood Bank</span></a></h1>
+			</div>
+			<button class="mobile-nav" aria-controls="primary-navigation" aria-expanded="false">
+				<i class="fa-solid fa-bars"></i>
+				<i class="fa-solid fa-xmark"></i>
+				<span class="visually-hidden">Menu</span>
+			</button>
+			<nav class="nav">
+				<ul class="list">
+					<li><a href="../HTMLFiles/Home1.html">Home</a></li>
+					<li><a href="../HTMLFiles/AboutUs.html">About</a></li>
+					<li><a href="../HTMLFiles/who-can.html">Who Can Give Blood</a></li>
+					<li><a href="../HTMLFiles/why-give.html">Why Give Blood</a></li>
+					<li><a href="../HTMLFiles/where-to.html">Where to Donate</a></li>
+					<li><a href="../HTMLFiles/contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+    <!-- <div class="whereto-banner">
+      <h1 class="banner-h">Where to Donate</h1>
+    </div> -->
+
+    <main class="container">
+        <div class="head">
+            <h1 class="general-h">Find a Donor Centre Near You</h1>
+        </div>
+        <div class="search-box">
+          <h2 class="general-h2">Our Donor Centres and Local Venues</h2>
+          <input type="search" name="search" class="search" id="search" onkeyup="myFunction()" placeholder="City, Town, Postcode..." autocomplete="off">
+        </div>
+
+        <div id="map"></div>
+        
+        <div class="middle">
+          <div class="row">
+            <div class="col">
+              <ul id="map-list">
+                <li><span class="list-item"><span class="name">Istanbul Kültür University</span><span class="city">Ataköy/Istanbul 34158</span><span class="number">0212 498 41 41</span></span></li>
+                <li><span class="list-item"><span class="name">Şirinevler Meydan</span><span class="city"> Bahçelievler/İstanbul 34188</span> <span class="number">0212 453 29 00</span></span></li>
+                <li><span class="list-item"><span class="name">Lüleburgaz Kan Bağışı Merkezi</span> <span class="city">Lüleburgaz/Kırklareli 39750</span> <span class="number">0212 453 29 00</span></span></li>
+                <li><span class="list-item"><span class="name">Edirne Kan Bağışı Merkezi</span><span class="city"> Merkez/Edirne 22100</span><span class="number">0212 453 29 00</span></span></li>
+                <li><span class="list-item"><span class="name">Çorlu Atatürk Heykeli</span><span class="city">Çorlu/Tekirdağ 59850</span><span class="number">0212 453 29 00</span></span></li>
+                <li><span class="list-item"><span class="name">Balıkesir Kan Bağışı Merkezi</span><span class="city">Karesi/Balıkesir</span><span class="number">0212 453 29 00</span></span></li>
+                <li><span class="list-item"><span class="name">Ankara Kan Bağışı Merkezi</span><span class="city">Mamak/Ankara 22100</span><span class="number">0212 453 29 00</span></span></li>
+                <li><span class="list-item"><span class="name">Sümer Günay KAB</span><span class="city">Kartal/Istanbul 34865</span><span class="number">0216 458 05 00</span></span></li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+
+    </main>
+
+    <footer id="footer">
+        <div class="f-container">
+          <div class="row">
+            <!-- col #1 -->
+            <div class="col-1">
+              <h3 class="letter-spacing-1">OTHER WEB SITES</h3>
+              <ul>
+                <li>
+                  <a href="http://www.kanver.org/" title="Blood Services">Blood Services</a>
+                </li>
+                <li>
+                  <a href="https://www.iku.edu.tr/" title="Health Group">İKÜ Health </a>
+                </li>
+                <li>
+                  <a href="https://www.iku.edu.tr/" title=" Kültür">Kültür Üniversitesi</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /col #1 -->
+            <!-- col #2 -->
+            <div class="col-2">
+              <h3 class="letter-spacing-1">CATEGORIES</h3>
+              <ul>
+                <li>
+                  <a href="/Bagis/" rel="external" target="_blank" title="Donation Page">Donation Page</a>
+                </li>
+                <li>
+                  <a href="#" rel="external" target="_blank" title="Frequently Asked Questions">Frequently Asked Questions</a>
+                </li>
+                <li>
+                  <a href="#" rel="external" target="_blank" title="Human Resources">Human Resources</a>
+                </li>
+                <li>
+                  <a href="#" rel="external" target="_blank" title="Links">Links</a>
+                </li>
+                <li>
+                  <a href="#" rel="external" target="_blank" title="Contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <!--/col #2-->
+            <!-- col #3 -->
+            <div class="col-3">
+              <h3 class="letter-spacing-1">DONATIONS</h3>
+              <ul>
+                <li>
+                  <a href="#" rel="external" target="_blank" title="General Donations">General Donations</a>
+                </li>
+                <li>
+                  <a href="#" rel="external" target="_blank" title="Social  Donations">Social Donations</a>
+                </li>
+                <li>
+                  <a href="#" rel="external" target="_blank" title="International Donations">International Donations</a>
+                </li>
+                <li>
+                  <a href="#" rel="external" target="_blank" title="Response Donations"> Response Donations</a>
+                </li>
+            </div>
+            <!-- /col #3 -->
+            <div class="col-4">
+              <form class="validate" data-success="Successful" data-toastr-position="bottom-right" method="post">
+                <h2>SUBSCRIBE TO BULLETIN</h2>
+                <br /> &nbsp; 
+                <div class="input-group">
+                  <input class="form-control required" id="email" name="email" placeholder="Your e-mail address" type="email" />
+                  <span class="input-group-btn">
+                    <a class="btn" href="#">SEND</a>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="c-container">
+            <ul class="pull-right">
+              <li>
+                <h5 class="letter-spacing-1">
+                  <a href="https://www.iku.edu.tr/">İKU KAN BAĞIŞI</a>
+                </h5>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+    <script src="../JSFiles/main.js" type="text/javascript"></script>
+</body>
+</html>
