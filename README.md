@@ -1,4 +1,5 @@
 # Blood-Donation-System-Website
 Blood Donation System Website
 
-In this project, I collaborated with my teammates to design a mini blood donation website to reinforce what I learned in my Web Programming course at school.
+I have designed a website to raise awareness about blood donation and facilitate the blood donation process. I developed the website
+using Html, CSS, JavaScript, and ASP.NET MVC technologies.
